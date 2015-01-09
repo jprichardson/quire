@@ -34,6 +34,7 @@ Let's say that you want to test it now, but since `sr.randomBuffer()` returns ra
 ```js
 it('should not do something', function() {
   var mod = require('./mymodule.js')
+  
   var res = mod.doSomething('JP')
   assert.equal(res.name, 'JP')
   assert(Buffer.isBuffer(res.secretNumber))
