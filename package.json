@@ -1,6 +1,6 @@
 {
   "name": "quire",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Stupidly simple stubbing/mocking for your require statements.",
   "main": "lib/quire.js",
   "scripts": {
