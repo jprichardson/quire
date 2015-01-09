@@ -1,7 +1,7 @@
 {
   "name": "quire",
   "version": "0.0.1",
-  "description": "Stub/mock your require statements.",
+  "description": "Stupidly simple stubbing/mocking for your require statements.",
   "main": "lib/quire.js",
   "scripts": {
     "test": "mocha"
