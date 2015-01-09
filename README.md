@@ -53,7 +53,8 @@ it('should not do something', function() {
     }
   }
 
-  var mod = quire('./fixtures/mod', stub)
+  //var mod = require('./mymodule.js')
+  var mod = quire('./mymodule.js', stub)
 
   var res = mod.doSomething('JP')
   assert.equal(res.name, 'JP')
