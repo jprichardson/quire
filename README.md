@@ -41,17 +41,19 @@ it('should not do something', function() {
 })
 ``` 
 
-now you can:
+now you can simply just change your `require()` to `quire()`:
 
 ```js
 it('should not do something', function() {
-  var mod = quire('./mymodule.js', {
+  var stub = {
     'secure-random': {
       randomBuffer: function() {
         return new Buffer([1,2,3,4])
       }
     }
-  })
+  }
+
+  var mod = quire('./fixtures/mod', stub)
 
   var res = mod.doSomething('JP')
   assert.equal(res.name, 'JP')
