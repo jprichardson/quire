@@ -1,0 +1,38 @@
+{
+  "name": "quire",
+  "version": "0.0.1",
+  "description": "Stub/mock your require statements.",
+  "main": "lib/quire.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jprichardson/quire"
+  },
+  "keywords": [
+    "require",
+    "mock",
+    "stub",
+    "dependency",
+    "injection",
+    "di",
+    "mocking",
+    "testing",
+    "jest"
+  ],
+  "author": "JP Richardson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jprichardson/quire/issues"
+  },
+  "homepage": "https://github.com/jprichardson/quire",
+  "dependencies": {
+    "js-object-pretty-print": "^0.1.3",
+    "recast": "^0.9.12",
+    "resolve": "^1.0.0"
+  },
+  "devDependencies": {
+    "secure-random": "^1.1.1"
+  }
+}
