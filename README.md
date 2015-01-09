@@ -44,19 +44,21 @@ it('should not do something', function() {
 now you can:
 
 ```js
-var mod = quire('./mymodule.js', {
-  'secure-random': {
-    randomBuffer: function() {
-      return new Buffer([1,2,3,4])
+it('should not do something', function() {
+  var mod = quire('./mymodule.js', {
+    'secure-random': {
+      randomBuffer: function() {
+        return new Buffer([1,2,3,4])
+      }
     }
-  }
-})
+  })
 
-var res = mod.doSomething('JP')
-assert.equal(res.name, 'JP')
-assert(Buffer.isBuffer(res.secretNumber))
-assert.equal(res.secretNumber.toString('hex').length, 8)
-assert.equal(res.secretNumber.toString('hex'), (new Buffer([1,2,3,4])).toString('hex'))
+  var res = mod.doSomething('JP')
+  assert.equal(res.name, 'JP')
+  assert(Buffer.isBuffer(res.secretNumber))
+  assert.equal(res.secretNumber.toString('hex').length, 8)
+  assert.equal(res.secretNumber.toString('hex'), (new Buffer([1,2,3,4])).toString('hex'))
+})
 ```
 
 Alternatives
