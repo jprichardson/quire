@@ -14,13 +14,15 @@ describe('quire', function() {
 
   describe('> when stub with an object', function() {
     it('should inject the stub', function() {
-      var mod = quire('./fixtures/mod', {
+      var stub = {
         'secure-random': {
           randomBuffer: function() {
             return new Buffer([1,2,3,4])
           }
         }
-      })
+      }
+
+      var mod = quire('./fixtures/mod', stub)
 
       var res = mod.doSomething('JP')
       assert.equal(res.name, 'JP')
